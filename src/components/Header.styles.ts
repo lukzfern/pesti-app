@@ -13,7 +13,7 @@ export const HeaderContent = styled.div`
 `
 
 export const LogoContainer = styled.div`
-  margin-right: 8px;
+  margin-right: 12px;
 `
 
 export const StyledLink = styled(Link)`
@@ -29,7 +29,23 @@ export const StyledLink = styled(Link)`
 `
 
 export const Title = styled.div`
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 600;
-  margin-left: 1rem;
+`
+
+export const Nav = styled.nav`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+`
+
+export const NavLink = styled(Link)`
+  color: ${props => props.theme.palette.text.primary};
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: ${props => props.theme.palette.action.hover};
+  }
 `

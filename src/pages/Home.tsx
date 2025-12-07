@@ -1,27 +1,27 @@
 import type { FC } from 'react'
 import type { BlogPost } from '../types/blog'
 import BlogCard from '../components/BlogCard'
-import { HomeContainer, HomeTitle, BlogList } from './Home.styles'
+import {
+  HomeContainer,
+  BlogList,
+  MainInfo,
+  MainInfoTitle,
+  MainInfoDescription
+} from './Home.styles'
+import { POSTS } from '../data/posts'
 
-const MOCK_POSTS: BlogPost[] = [
-  {
-    id: '1',
-    title: 'Welcome to My Blog',
-    slug: 'welcome',
-    description: 'An introduction to my personal blog and what you can expect to find here. Join me on this journey of sharing thoughts, experiences, and learnings.',
-    tags: ['Introduction', 'Personal'],
-    createdAt: '2025-09-15T12:00:00Z',
-    updatedAt: '2025-09-15T12:00:00Z',
-    path: '/blog/welcome'
-  }
-]
+const MOCK_POSTS: BlogPost[] = POSTS
 
 const Home: FC = () => {
   return (
     <HomeContainer>
-      <HomeTitle>
-        Latest Posts
-      </HomeTitle>
+      <MainInfo>
+        <MainInfoTitle>Hi — Lucas here</MainInfoTitle>
+        <MainInfoDescription>
+          Short notes, experiments and small things I find interesting. Mostly dev-focused—tools,
+          tips, and occasional project write-ups.
+        </MainInfoDescription>
+      </MainInfo>
       <BlogList>
         {MOCK_POSTS.map(post => (
           <BlogCard key={post.id} post={post} />

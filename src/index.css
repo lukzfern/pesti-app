@@ -7,10 +7,17 @@
 :root {
   font-family: Roboto, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  /* translucent tag background (12% alpha of tag color) avoids a solid black box */
+  --brand-tag-bg: oklch(71.8% 0.202 349.761 / 0.12);
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
+
+  /* Brand color tokens (OKLCH values provided) */
+  --brand-title: oklch(97.3% 0.071 103.193);
+  --brand-tag-fg: oklch(71.8% 0.202 349.761);
+  --brand-tag-bg: color-mix(in oklch, var(--brand-tag-fg) 12%, black 88%);
+  --brand-accent: oklch(88.2% 0.059 254.128);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,7 +26,7 @@
 }
 
 body {
-  background-color: oklch(13% .028 261.692);
+  background-color: oklch(13% 0.028 261.692);
 }
 
 .main-header {

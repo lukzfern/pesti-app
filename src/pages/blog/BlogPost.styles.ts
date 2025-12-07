@@ -1,10 +1,31 @@
 import styled from 'styled-components'
 import { Paper, Typography } from '@mui/material'
 
+export const BannerContainer = styled.div<{ $bannerImage?: string }>`
+  width: 100%;
+  height: 300px;
+  margin: -2rem -2rem 2rem -2rem;
+  border-radius: 8px 8px 0 0;
+  background-image: ${props => (props.$bannerImage ? `url('${props.$bannerImage}')` : 'none')};
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(25%);
+  opacity: 0.15;
+  transition: opacity 0.25s ease-in-out;
+
+  &:hover {
+    opacity: 0.25;
+  }
+`
+
 export const BlogPostContainer = styled(Paper)`
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
+
+  &:hover ${BannerContainer} {
+    opacity: 0.25;
+  }
 `
 
 export const BlogPostHeader = styled.header`

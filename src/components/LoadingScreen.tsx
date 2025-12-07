@@ -15,14 +15,20 @@ const LoadingText = styled.div`
   color: ${props => props.theme.palette.text.secondary};
   font-size: 0.875rem;
   margin-top: 1rem;
-  
+
   /* Subtle pulse animation */
   @keyframes pulse {
-    0% { opacity: 0.6; }
-    50% { opacity: 1; }
-    100% { opacity: 0.6; }
+    0% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.6;
+    }
   }
-  
+
   animation: pulse 2s ease-in-out infinite;
 `
 
@@ -36,11 +42,11 @@ const LoadingMessage = styled.span`
 `
 
 const messages = [
-  "Almost there...",
-  "Just a moment...",
-  "Loading your content...",
-  "Making things perfect...",
-  "Brewing some magic..."
+  'Almost there...',
+  'Just a moment...',
+  'Loading your content...',
+  'Making things perfect...',
+  'Brewing some magic...'
 ]
 
 const LoadingScreen: FC = () => {

@@ -1,10 +1,10 @@
-export type BlogTag = 
-  | 'Personal' 
-  | 'Tech' 
-  | 'Travel' 
-  | 'Thoughts' 
-  | 'Introduction' 
-  | 'Project' 
+export type BlogTag =
+  | 'Personal'
+  | 'Tech'
+  | 'Travel'
+  | 'Thoughts'
+  | 'Introduction'
+  | 'Project'
   | 'Tutorial'
 
 export interface BlogPost {
@@ -16,4 +16,5 @@ export interface BlogPost {
   createdAt: string
   updatedAt: string
   path: string
+  bannerImage?: string
 }
